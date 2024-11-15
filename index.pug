@@ -1,0 +1,29 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmin
+            em (Posted by Admin)
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text
+
+doctype html 
+html 
+    head 
+        title Condionals in Pug
+        style.
+            .comment{
+                font-family: sans-serif;
+                line-height: 1.5;
+                padding: 10px;
+                border: 1px solid #555;
+                width: 250px;
+            }
+
+            .date{ font-size: 85%; text-align: right}
+            .author { font-size: 110%; font-weight: bold;}
+            .text{font-size: 100%}
+    body    
+        include includes/nav
+
+        div 
+            h1 hello
