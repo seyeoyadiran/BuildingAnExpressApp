@@ -1,0 +1,16 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmin
+            em (Posted by Admin)
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text
+block content 
+doctype html 
+html 
+    head 
+    body
+        include includes/nav
+        block content
+        div 
+            h1 hello
